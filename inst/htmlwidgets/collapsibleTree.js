@@ -53,7 +53,7 @@ HTMLWidgets.widget({
       var nodeEnter = node.enter().append('g')
       .attr('class', 'node')
       .attr('transform', function(d) {
-        return 'translate(' + source.y0 + ',' + source.x0 + ')';
+        return 'translate(' + source.x0 + ',' + source.y0 + ')';
       })
       .on('click', click);
 
@@ -99,7 +99,7 @@ HTMLWidgets.widget({
       nodeUpdate.transition()
       .duration(duration)
       .attr('transform', function(d) {
-        return 'translate(' + d.y + ',' + d.x + ')';
+        return 'translate(' + d.x + ',' + d. + ')';
       });
 
       // Update the node attributes and style
@@ -120,7 +120,7 @@ HTMLWidgets.widget({
       var nodeExit = node.exit().transition()
       .duration(duration)
       .attr('transform', function(d) {
-        return 'translate(' + source.y + ',' + source.x + ')';
+        return 'translate(' + source.x + ',' + source.y + ')';
       })
       .remove();
 
